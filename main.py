@@ -2,6 +2,8 @@ import copy
 import random
 from task_one import *
 from task_two import *
+from task_three import *
+from task_four import *
 
 
 if __name__ == '__main__':
@@ -18,7 +20,7 @@ if __name__ == '__main__':
     maxValue = max(numbers)
     print("Minimal value is:", minValue)
     print("Maximum value is:", maxValue)
-    # TASK 1
+    # TASK 1 ---------------------
     # ascending order sort
     numbers.sort()
     print("Sorted in ascending order array:", numbers)
@@ -40,7 +42,7 @@ if __name__ == '__main__':
     numbers = const_arr.copy()
     res = sorting_task_c(numbers)
     print("Task C:", res)
-    # TASK 2
+    # TASK 2 ---------------------
     # generate two-dimensional array
     matrix = [[math.floor(random.random()*100+1) for x in range(sizeOfMartix)] for y in range(sizeOfMartix)]
     const_matr = copy.deepcopy(matrix)
@@ -60,6 +62,7 @@ if __name__ == '__main__':
     print("Maximum value of matrix is:", trueMax)
     # Task A
     task_a(matrix)
+    arr_a = copy.deepcopy(matrix)
     print("Task A:")
     print_matrix(matrix)
     # Task Б
@@ -69,4 +72,16 @@ if __name__ == '__main__':
     # Task В
     matrix = copy.deepcopy(const_matr)
     print("Task C:")
-    task_c(matrix)
+    print_matrix(task_c(matrix))
+    # Task Г
+    # Task Д
+    print("Task E:")
+    print_matrix(task_e(arr_a))
+    # Task E
+    # TASK 3 -----------------------
+    print()
+    task_3()
+    # TASK 4 -----------------------
+    print()
+    task_4()
+
